@@ -1,8 +1,12 @@
 The Basic Code For this Project was given through The University of Haifa By Mr.Roi 
+# Computer Graphics 203.3710
+## Students Team data
+### Lecturer
+*Roi Poranne*
 
 Note : everything done in the project was inspired by the book given in the Textures lecture .
 link : https://learnopengl.com/ 
-## section 1 :
+
 
  This function  basically takes the 4 vertices from vertices vtc[] and thier texture couardinates from tex[] and sends(copies) them to the gpu. 
  then uses the built in shaders to render the vertices with the texures .
@@ -41,13 +45,13 @@ we see that in the fragment shader :
   and thats how every pixel is calculated .
   those textures are displayed according to the gl_position that was calculated in the V-shader .
   
-## section 2:
+
  
   ### a couple of steps :
    * added texture to the constructor and updated the function in utility to get said textures from the obj file 
    * changed the recalibration such that it accures in the constructor (centering and resizing of the object). 
    * i updated the mesh model class by adding a Vertix class and adding vbo(vertix buffer object ) and vao( vertix array object ) but on the recalibrated vertices ! .
-## section 3:
+
   
   * i used the reference code and added to it the multiplication of the camera matrices i.e. if we want to make adjustments to the camera without using lookat function.
   
@@ -81,7 +85,6 @@ we see that in the fragment shader :
      }
 
   
-## section 4:
   * the code for the fragment shader , i just added one line that gives a static color for the time being:
    
  ### code:
@@ -99,7 +102,7 @@ we see that in the fragment shader :
            
 
            
-## section 5:
+
 
 ### changes on the code to send vao to the shaders in the gpu :
 
@@ -110,14 +113,6 @@ we see that in the fragment shader :
  ![image](https://user-images.githubusercontent.com/92520508/150781248-543c5149-0ae5-40e9-9125-65568679d9a3.png)
 
 
-### changes in main :
-
-
- * in function RenderFrame :
-
-
-  ![image](https://user-images.githubusercontent.com/92520508/150781592-38250758-0d5d-498a-865f-8530138c3422.png)
-  
 
 
  ### teapot was drawn successfully :
@@ -128,7 +123,6 @@ we see that in the fragment shader :
 
 
 
-## section 6 :
   * I treat light as a mesh model ,so i added a boolian to the fshader so that when i send a light to be calculated in the gpu it outputs only a single color to draw the light 
   * in the f shader i added a light class so that when i figure out how to create multiple lights i will be able to do that in the shaders and also added a function in the fragment shader that calculates phong shading.
   * i was saved by the book referenced above as i was having a problem where the specular lighting does shine but it shined both from the closest couardinate to the light and from the other symetrical end ! as i was multiplying  the view volume with the rest of the matrices and then with the normals.
