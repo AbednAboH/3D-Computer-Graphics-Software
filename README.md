@@ -4,6 +4,9 @@ The Basic Code For this Project was given through The University of Haifa By Mr.
 ### Lecturer
 *Roi Poranne*
 
+
+The progression throughout the project can be seen in Reports from 1 to 3 , as we were instructed by the lecturer .
+
 Note : everything done in the project was inspired by the book given in the Textures lecture .
 link : https://learnopengl.com/ 
 
